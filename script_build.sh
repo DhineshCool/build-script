@@ -5,7 +5,7 @@
 # Some User's Details. Please fill it with your own details.
 
 # Replace "legacy" with your own SSH Username in lowercase
-username=legacy
+username=dhinesh
 
 # Colors makes things beautiful
 export TERM=xterm
@@ -40,7 +40,7 @@ fi
 
 # Build ROM
 source build/envsetup.sh
-lunch "$lunch_command"_"$device_codename"-"$build_type"
+lunch lineage_payton-userdebug
 
 # Its Clean Time
 if [ "$make_clean" = "yes" ];
@@ -59,4 +59,4 @@ echo -e ${cya}"Images deleted from OUT dir"${txtrst};
 fi
 
 # Build ROM
-make "$target_command" -j"$jobs"
+make bacon -j8
